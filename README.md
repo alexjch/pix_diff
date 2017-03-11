@@ -1,6 +1,6 @@
 # Identifying video frames with content changes
 
-Basic detection of changes in between video frames using Pillow library.
+Basic detection of changes in between video frames using Pillow library. The motivation is to use an intel edison to record and save images to a cloud service storage and avoid serving these images from a device in my network (And opening my network to potential attacks) 
 
 ## Hardware setup
 * Intel edison
