@@ -4,34 +4,23 @@ Basic detection of changes in between video frames using Pillow library. The mot
 
 ## Hardware setup
 * Intel edison
+    -- load latest OS
+    -- load needed libraries
 * Camera
+    -- troubleshoot
+    -- configure
 * ffmpeg
+    -- compile if needed
 * AWS
+    -- install needed libraries
 
 ## Usage
+Commands
+Systemd configuration
 
-
-## Frame generation
-ffmpeg -i ~/videostream/night.mp4 -r 1/1 ~/imagestream/$filename%03d.bmp
-
-## Change detection
-
-
-## Save frames that contain actions
-
-
-## Video to frames
-
-
-## TODO:
-* Video capture and frame generation (script?)
-* Include edison setup
-** Camera
-** Video capture bits as systemd service
 
 ##Some Sources
 https://pillow.readthedocs.io/en/3.4.x/index.html
 http://docs.opencv.org/3.0-beta/index.html
 http://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/
-
 
