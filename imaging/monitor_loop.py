@@ -1,8 +1,8 @@
 import os
 import shutil
 import glob
-from detector import VideoMonitor
-from draw_bbox import draw_bbox
+from .detector import VideoMonitor
+from .draw_bbox import draw_bbox
 
 IN_PATH = None
 OUT_PATH = None

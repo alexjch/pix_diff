@@ -1,5 +1,7 @@
 import os
-from detector import calc_size, INSET_PIXELS
+from .detector import (
+    calc_size,
+    INSET_PIXELS)
 from PIL import Image, ImageDraw
 
 

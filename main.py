@@ -1,7 +1,9 @@
 import argparse
 import configparser
-import monitor_loop
-from storage import Storage, save_frames
+from imaging import monitor_loop
+from storage.storage import (
+    init_storage,
+    save_frames,)
 
 
 def parse_conf(conf_file):
@@ -40,8 +42,8 @@ def main(args):
     }
     monitor_loop.process_frames(conf=conf)
     # Store to AWS
-    store = Storage(keyid, access_key)
-    save_frames(store, bucket, out_frames)
+    storage = init_storage(conf)
+    save_frames(storage, bucket, out_frames)
 
 
 if __name__ == '__main__':
