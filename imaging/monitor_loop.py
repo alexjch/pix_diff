@@ -34,10 +34,7 @@ def process_frame(frame, out=OUT_PATH):
     if change is True:
         # Store
         print('saving {}'.format(frame))
-        out_path = ['/'] + \
-                   out.split('/') + [os.path.basename(os.path.dirname(frame))
-                                     , os.path.basename(frame)]
-        out_file = os.path.join(*out_path)
+        out_file = os.path.join(out, os.path.basename(frame))
         # Create path if it does not exists
         if os.path.exists(os.path.dirname(out_file)) is False:
             os.makedirs(os.path.dirname(out_file))
@@ -50,8 +47,8 @@ def process_frame(frame, out=OUT_PATH):
 
 def process_frames(conf=defaults):
     img_ext = conf.get('img_ext')
-    in_path = conf.get('in')
-    out_path = conf.get('out')
+    in_path = conf.get('in_frames')
+    out_path = conf.get('out_frames')
     frames = glob.glob(os.path.join(in_path, "*.{}".format(img_ext)))
     if len(frames) < 2:
         return
